@@ -9,13 +9,15 @@ var AccountSchema = new Schema({
     username: String,
     password: String
   },
-  {collection: 'account'}
+  {collection: 'Account'}
 )
 
+var Account = mongoose.model('Account', AccountSchema)
+
 AccountSchema.statics = {
-  load: function (id, cb) {
-    this.findOne({_id: id}).exec(cb)
+  login: function (user, password, cb) {
+    this.findOne({username: username, password: password}).exec(cb)
   }
 }
 
-module.exports = mongoose.model('Account', AccountSchema)
+module.exports = Account
