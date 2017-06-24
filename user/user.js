@@ -1,4 +1,4 @@
-var mongoose = require('mongoose') //mongoose wird importiert
+var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
 var UserSchema = new Schema({
@@ -20,7 +20,7 @@ var UserSchema = new Schema({
 
 UserSchema.statics = {
   load: function (id, cb) {
-    this.findOne({_id: id}).exec(cb)
+    this.findOne({}, 'name', cb)
   }
 }
 
