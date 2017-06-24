@@ -20,7 +20,7 @@ var UserSchema = new Schema({
 
 UserSchema.statics = {
   load: function (id, cb) {
-    this.findOne({}, 'name', cb)
+    this.findOne({}, cb)
   }
 }
 
