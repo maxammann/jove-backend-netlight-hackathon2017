@@ -12,6 +12,8 @@ exports.login = function (req, res) {
     }
     if (account) {
       res.status(201).json({response: {token: createToken(account)}})
+    } else {
+      res.status(401).json({response: {}})
     }
   })
 }
