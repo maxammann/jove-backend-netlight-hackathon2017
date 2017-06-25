@@ -9,5 +9,5 @@ exports.get = function (req, res) {
   })
 }
 
-// todo get new user for specific company, which should be shown in the app (recommendations)
+// todo get companies for specific user, which should be shown in the app (recommendations)
 // todo get users for specific account
