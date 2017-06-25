@@ -12,7 +12,7 @@ var UserSchema = new Schema({
     dateOfBirth: String,
     birthPlace: String,
     uuid: String,
-    photo: String,
+    image: String,
     accountId: {type: Schema.Types.ObjectId, ref:'account'}
   },
   {collection: 'User'}

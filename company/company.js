@@ -10,6 +10,7 @@ var CompanySchema = new Schema({
     eMail: String,
     description: String,
     phone: String,
+    image: String,
     accountId: {type: Schema.Types.ObjectId, ref: 'account'}
   },
   {collection: 'Company'}
