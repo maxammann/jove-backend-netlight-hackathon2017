@@ -4,7 +4,7 @@ var Company = mongoose.model('Company')
 
 exports.all = function (req, res) {
   Company.loadAll(function (err, companies) {
-    res.json({result: companies})
+    res.json({response: companies})
   })
 }
 

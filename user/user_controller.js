@@ -10,7 +10,7 @@ exports.get = function (req, res) {
   var decoded = jwt.decode(token, "very secret")
 
   User.load(decoded.account._id, function (err, user) {
-    res.json(user)
+    res.json({response: user})
   })
 }
 
