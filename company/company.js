@@ -10,9 +10,9 @@ var CompanySchema = new Schema({
     eMail: String,
     description: String,
     phone: String,
-    account: {type: Schema.Types.ObjectId, ref: 'account'},
+    account: {type: Schema.Types.ObjectId, ref: 'account'}
   },
-  {collection: 'company'}
+  {collection: 'Company'}
 )
 
 CompanySchema.statics = {
