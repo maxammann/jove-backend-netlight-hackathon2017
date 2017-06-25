@@ -71,6 +71,13 @@ print(score);
 // Step 4. If obtain new data, go back to Step 2, but
 // with less number of iteration.
 // Could only iterate on the new data ( haven't implemented yet) 
+// For example:
+ret = optimize(10, num_user, num_comp, step_size, History_R, V, W);
+V=ret[0];
+W=ret[1];
+// Forming the recommendation matrix 
+estimate_R = math.multiply(V,W);
+// Then do Step 3. and so and so on.
 
 
 
