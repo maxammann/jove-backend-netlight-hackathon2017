@@ -13,6 +13,7 @@
     "express": "~4.15.2",
     "express-orm-mvc": "^1.1.0",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^7.4.1",
     "mongoose": "^4.10.8",
     "morgan": "~1.8.1",
     "mysql2": "^1.3.5",
