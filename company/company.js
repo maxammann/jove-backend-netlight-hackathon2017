@@ -10,11 +10,10 @@ var CompanySchema = new Schema({
     eMail: String,
     description: String,
     phone: String,
-    account: {type: Schema.Types.ObjectId, ref: 'account'}
+    accountId: {type: Schema.Types.ObjectId, ref: 'account'}
   },
   {collection: 'Company'}
 )
-
 CompanySchema.statics = {
   load: function (id, cb) {
     this.findOne({_id: id}).exec(cb)
