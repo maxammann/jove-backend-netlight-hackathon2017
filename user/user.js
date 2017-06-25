@@ -19,8 +19,8 @@ var UserSchema = new Schema({
 )
 
 UserSchema.statics = {
-  load: function (id, cb) {
-    this.findOne({}, cb)
+  load: function (account, cb) {
+    this.findOne({accountId: account}, cb)
   }
 }
 

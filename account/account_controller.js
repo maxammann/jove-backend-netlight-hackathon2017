@@ -12,7 +12,7 @@ exports.login = function (req, res) {
       return console.error(err)
     }
     if (account) {
-      res.status(201).json({token: createToken(account)});
+      res.status(201).json({token: createToken(account), account: account});
     }
   })
 }
@@ -25,4 +25,4 @@ function createToken(account) {
         }
     };
     return jwt.encode(tokenPayload, secretKey);
-};
+}
