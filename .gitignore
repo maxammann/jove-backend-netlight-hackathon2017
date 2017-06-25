@@ -104,3 +104,10 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.idea/jove-backend.iml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/runConfigurations/bin_www.xml
+public/stylesheets/style.css
