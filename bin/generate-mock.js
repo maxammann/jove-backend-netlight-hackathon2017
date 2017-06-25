@@ -19,7 +19,7 @@ var Company = mongoose.model('Company')
 var Account = mongoose.model('Account')
 var User = mongoose.model('User')
 
-/*account.remove({}, function () {
+Account.remove({}, function () {
  console.log('cleared accounts')
  }).exec().resolve()
  Company.remove({}, function () {
@@ -27,7 +27,7 @@ var User = mongoose.model('User')
  }).exec().resolve()
  User.remove({}, function () {
  console.log('cleared users')
- }).exec().resolve()*/
+ }).exec().resolve()
 var waitTill = new Date(new Date().getTime() + 2 * 1000)
 while (waitTill > new Date()) {}
 

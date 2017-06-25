@@ -1,9 +1,8 @@
 var express = require('express')
 var router = express.Router()
-var user = require('./company')
-var userCtrl = require('./company_controller')
+var companController = require('./company_controller')
 
 /* GET users listing. */
-router.get('/company', userCtrl.get)
+router.get('/all', companController.all)
 
 module.exports = router

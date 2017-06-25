@@ -2,10 +2,9 @@ require('./company')
 var mongoose = require('mongoose')
 var Company = mongoose.model('Company')
 
-exports.get = function (req, res) {
-  console.log(req)
-  Company.load(req.param.id, function (err, company) {
-    res.json(company)
+exports.all = function (req, res) {
+  Company.loadAll(function (err, companies) {
+    res.json({result: companies})
   })
 }
 

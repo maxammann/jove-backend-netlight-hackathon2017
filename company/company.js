@@ -16,8 +16,8 @@ var CompanySchema = new Schema({
   {collection: 'Company'}
 )
 CompanySchema.statics = {
-  load: function (id, cb) {
-    this.findOne({_id: id}).exec(cb)
+  loadAll: function (cb) {
+    this.find({}, cb)
   }
 }
 
