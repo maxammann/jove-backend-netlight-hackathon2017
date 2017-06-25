@@ -40,6 +40,13 @@ app.use(function (req, res, next) {
   err.status = 404
   next(err)
 })
+//passport
+
+var passport = require('passport');
+var jwtConfig = require('./account/tokenController');
+
+app.use(passport.initialize());
+jwtConfig(passport);
 
 // error handler
 app.use(function (err, req, res, next) {
