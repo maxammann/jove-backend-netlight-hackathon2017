@@ -8,3 +8,6 @@ exports.get = function (req, res) {
     res.json(company)
   })
 }
+
+// todo get new companies for specific user, which should be shown in the app (recommendations)
+// todo get companies for specific account
