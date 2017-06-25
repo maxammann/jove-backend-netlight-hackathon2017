@@ -31,10 +31,16 @@ var User = mongoose.model('User')
 var waitTill = new Date(new Date().getTime() + 2 * 1000)
 while (waitTill > new Date()) {}
 
-var account = new Account({userName: 'test', userPassword: '123456'})
-account.save(function (err) {
+var userAccount = new Account({userName: 'user', userPassword: '123456'})
+userAccount.save(function (err) {
   if (err) return console.error(err)
 })
+
+var companyAccount = new Account({userName: 'company', userPassword: '123456'})
+companyAccount.save(function (err) {
+  if (err) return console.error(err)
+})
+
 
 Account.find({}, 'userName', function (err, results) {
   console.log('Accounts:' + results)
@@ -47,7 +53,7 @@ for (var i = 500; i >= 0; i--) {
     description: faker.company.catchPhrase(),
     phone: faker.phone.phoneNumber(),
     image: faker.image.business(),
-    accountId: account._id
+    accountId: companyAccount._id
   }).save(function (err) {
     if (err) return console.error(err)
   })
@@ -57,14 +63,14 @@ Company.find({}, 'name', function (err, results) {
   console.log('Companies:' + results[0])
 })
 
-for (i = 500; i >= 0; i--) {
+for (i = 1; i >= 0; i--) {
   new User({
     name: faker.name.findName(),
     eMail: faker.internet.email(),
     phoneNumber: faker.phone.phoneNumber(),
     dateOfBirth: faker.date.past(),
     image: faker.image.avatar(),
-    accountId: account._id
+    accountId: userAccount._id
   }).save(function (err) {
     if (err) return console.error(err)
   })
